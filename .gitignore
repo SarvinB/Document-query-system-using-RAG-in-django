@@ -1,0 +1,66 @@
+/faiss_index
+# =====================
+# Python
+# =====================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+
+# Virtual environment
+venv/
+env/
+ENV/
+.venv/
+
+# =====================
+# Django
+# =====================
+*.log
+db.sqlite3
+media/
+staticfiles/
+local_settings.py
+
+# Django migrations (optional: usually keep these!)
+# Uncomment only if you want to ignore migrations (not recommended)
+# */migrations/*.py
+# */migrations/*.pyc
+# !*/migrations/__init__.py
+
+# =====================
+# Environment variables
+# =====================
+.env
+.env.*
+
+# =====================
+# IDEs / editors
+# =====================
+.vscode/
+.idea/
+*.swp
+*.swo
+*.sublime-project
+*.sublime-workspace
+
+# =====================
+# OS files
+# =====================
+.DS_Store
+Thumbs.db
+
+# =====================
+# Testing / coverage
+# =====================
+htmlcov/
+.coverage
+coverage.xml
+.pytest_cache/
+.tox/
+
+# =====================
+# Django static/media build
+# =====================
+staticfiles/
