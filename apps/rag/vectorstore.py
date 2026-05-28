@@ -9,8 +9,9 @@ DB_PATH = str(settings.BASE_DIR / "faiss_index")
 
 def get_vectorstore(embedding_model):
 
-    if os.path.exists(DB_PATH):
+    index_file = os.path.join(DB_PATH, "index.faiss")
 
+    if os.path.exists(index_file):
         return FAISS.load_local(
             DB_PATH,
             embedding_model,
@@ -18,7 +19,7 @@ def get_vectorstore(embedding_model):
         )
 
     vectorstore = FAISS.from_texts(
-        texts=['initial'],
+        texts=["initial"],
         embedding=embedding_model
     )
 
