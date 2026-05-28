@@ -10,10 +10,13 @@ from langchain.chat_models import init_chat_model
 
 from openai import OpenAI
 
+from dotenv import load_dotenv
+
 class RagService:
 
     def __init__(self):
-        
+
+        load_dotenv()
         OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
         
         self.llm = OpenAI(
